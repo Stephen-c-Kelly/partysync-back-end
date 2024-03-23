@@ -40,8 +40,8 @@ environ.Env.read_env()
 
 
 # These are required
-DATABASE_URL=env('DATABASE_URL')
-SECRET_KEY=env('SECRET_KEY')
+# DATABASE_URL=env('DATABASE_URL')
+# SECRET_KEY=env('SECRET_KEY')
 
 # These are not required.
 # If you want to connect locally to the database you may need them
@@ -113,20 +113,20 @@ REST_FRAMEWORK = {
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': 
-        dj_database_url.config('DATABASE_URL')
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'party_sync',
-#         'USER': 'party_sync_admin',
-#         'PASSWORD': 'password',
-#         'HOST': 'localhost'
-#     }
+#     'default': 
+#         dj_database_url.config('DATABASE_URL')
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'party_sync',
+        'USER': 'party_sync_admin',
+        'PASSWORD': 'password',
+        'HOST': 'localhost'
+    }
+}
 
 
 # Password validation
